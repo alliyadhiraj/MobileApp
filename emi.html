@@ -39,15 +39,19 @@
                     <input type="number" id="inputNum" />
                 </div>
                 <div class="loanAmount">
-                    <h4>Loan Month</h4>
+                    <h4>Interest Rate (%)</h4>
                     <div class="slidecontainer mr-10">
                         <input type="range" min="1" max="12" value="1" class="slider" id="myRange2">
                     </div>
                     <input type="number" id="inputNum" />
                 </div>
                 <div class="loanAmount">
-                    <h4>Interest Rate (%)</h4>
-                    <input type="number" min="5" max="15" value="5" />
+                    <h4>Loan Tenure</h4>
+                    <input type="text" id="loantenure" required min="5" max="15" value="5" />
+                </div>
+                <div class="radio-container">
+                    <input type="radio" name="btn" id="year"><label for="year">Year</label>
+                    <input type="radio" name="btn" id="Month"><label for="Month">Month</label>
                 </div>
                 <div class="loanAmount test">
                     <button>EMI Calculate</button>
@@ -57,11 +61,15 @@
             <div class="emi-result-container">
                 <div class="totalamt">
                     <h3>EMI Amount</h3>
-                    <p>4000</p>
+                    <span id="emi">Rs</span>
                 </div>
                 <div class="totalamt">
-                    <h3>Total Payment <br /> (Principal + Interest)</h3>
-                    <p>40000</p>
+                    <h3>Total Payment<br>(principal + interest)</h3>
+                    <span id="totalpayment">Rs</span>
+                </div>
+                <div class="totalamt">
+                    <h3>Total Interest Payable</h3>
+                    <span id="totalinterest">Rs</span>
                 </div>
             </div>
 
