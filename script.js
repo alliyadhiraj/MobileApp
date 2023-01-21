@@ -18,7 +18,7 @@ function downClick() {
   rotateSum = rotateValue + "rotate(90deg)";
   circle.style.transform = rotateSum;
   rotateValue = rotateSum;
-}
+ }
 
 /*Contact Form*/
 /*Form Validation*/
@@ -48,3 +48,4 @@ function validate() {
     alert("Form Validated Successfully.");
   }
 }
+

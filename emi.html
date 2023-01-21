@@ -20,9 +20,9 @@
             <ul>
                 <li><a href="index.html"> Home </a> </li>
                 <li><a href="services.html"> Services </a> </li>
-                <li><a href="#"> About </a> </li>
+                <li><a href="about.html"> About </a> </li>
                 <li><a href="emi.html"> EMI </a> </li>
-                <li><a href="#"> Cart</a> </li>
+                <li><a href="cart.html"> Cart</a> </li>
                 <li><a href="contact.html"> Contact</a> </li>
             </ul>
         </div>
@@ -31,30 +31,33 @@
         </div>
         <div class="emi-parent-container">
             <div class="emi-form-container">
-                <div class="loanAmount">
+                <div class="loanAmount" >
                     <h4>Loan Amount</h4>
                     <div class="slidecontainer">
-                        <input type="range" min="5000" max="200000" value="5000" class="slider" id="myRange">
+                        <input type="number" id="amount" />    
                     </div>
-                    <input type="number" id="inputNum" />
+                    
                 </div>
                 <div class="loanAmount">
                     <h4>Interest Rate (%)</h4>
                     <div class="slidecontainer mr-10">
-                        <input type="range" min="1" max="12" value="1" class="slider" id="myRange2">
+                        <!-- <input type="range" min="1" max="12" value="1" class="slider" id="myRange2"> -->
+                        <input type="number" id="interest" />
                     </div>
-                    <input type="number" id="inputNum" />
+                    
                 </div>
-                <div class="loanAmount">
+                <div class="loanAmount loan-tenure-container">
                     <h4>Loan Tenure</h4>
                     <input type="text" id="loantenure" required min="5" max="15" value="5" />
+
+                    <div class="radio-container">
+                        <input type="radio" name="btn" id="year"><label for="year">Year</label>
+                        <input type="radio" name="btn" id="Month"><label for="Month">Month</label>
+                    </div>
                 </div>
-                <div class="radio-container">
-                    <input type="radio" name="btn" id="year"><label for="year">Year</label>
-                    <input type="radio" name="btn" id="Month"><label for="Month">Month</label>
-                </div>
+                
                 <div class="loanAmount test">
-                    <button>EMI Calculate</button>
+                    <input type="submit" value="Submit" id="calculate">
                 </div>
             </div>
 
@@ -80,6 +83,6 @@
     integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script src="script.js"></script>
+<script src="emiCalculate.js"></script>
 
-</html>
+<!-- </html><input type="range" min="5000" max="200000" value="5000" class="slider" id="myRange"> -->
