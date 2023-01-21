@@ -1,4 +1,8 @@
 /** Circle effect on homepage with button click**/
+const url = window.location.href;
+const lastSegment = url.split("/").pop();
+if (lastSegment === "index.html") {
+
 let circle = document.getElementById("circle");
 
 let btnUp = document.getElementById("btnUp");
@@ -19,6 +23,7 @@ function downClick() {
   circle.style.transform = rotateSum;
   rotateValue = rotateSum;
  }
+} else if (lastSegment === "contact.html") {
 
 /*Contact Form*/
 /*Form Validation*/
@@ -48,4 +53,19 @@ function validate() {
     alert("Form Validated Successfully.");
   }
 }
+} else if (lastSegment == "cart.html") {
+ //Cart total calculation
+ let quantity = document.getElementById("qty");
+ let totalValue = document.getElementById("total-value");
+ let price = document.getElementById("price");
+ // let price = document.getElementsByTagName("h3")[1].innerHTML;
 
+ quantity.addEventListener("change", () => {
+   calculateTotal();
+ });
+
+ const calculateTotal = () => {
+   // let total = parseInt(quantity.value) * parseInt(price.value);
+   totalValue.innerText = parseInt(quantity.value) * parseInt(price.innerText);
+ };
+}
