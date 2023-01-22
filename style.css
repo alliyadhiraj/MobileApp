@@ -384,6 +384,7 @@ form .btn:hover {
 
 /*EMI Page*/
 
+
 .emi-parent-container {
   display: flex;
 }
@@ -442,10 +443,10 @@ form .btn:hover {
   font-size: larger;
 }
 
-.loanAmount button {
+.loanAmount input {
   border: none;
   width: 150px;
-  padding: 10px;
+  padding: 5px;
   font-size: 20px;
   align-self: center;
   background-color: rgb(178, 255, 195);
